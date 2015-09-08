@@ -1,5 +1,5 @@
 #Learn to Program/Chris Pine/Odin Project
-#Array/Sort User Input w/ sort method
+#Array/Sort User Input with homemade sort
 
 array = []
 word = 'example'
@@ -11,8 +11,18 @@ puts ' '
 
 while word != ''
   word = gets.chomp
-  array.push word.downcase
+  word = word.downcase
+  array.push word
+end
+
+array.each_index do |word1|
+  array.each_index do |word2|
+    if array[word1] < array[word2]
+      array[word1], array[word2] = array[word2], array[word1]
+      array.join(', ')
+    end
+  end
 end
 
 puts "Your list arranged alphabetically"
-puts array.sort
+puts array
