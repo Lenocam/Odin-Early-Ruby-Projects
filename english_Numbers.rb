@@ -1,3 +1,6 @@
+#Learn to Program/Chris Pine/Odin Project
+#Chapter 8 Tasks/Numbers in English
+
 def englishNumber number
   if number < 0  # No negative numbers.
     return 'Please enter a number that isn\'t negative.'

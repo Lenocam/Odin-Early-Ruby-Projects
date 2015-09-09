@@ -1,3 +1,7 @@
+#Learn to Program/Chris Pine/Odin Project
+#Chapter 8 Tasks/Bottles of beer on the wall in English
+
+
 def englishNumber number
   if number < 0  # No negative numbers.
     return 'Please enter a number that isn\'t negative.'

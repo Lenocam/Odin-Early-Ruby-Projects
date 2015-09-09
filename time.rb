@@ -1,3 +1,5 @@
+#Learn to Program/Chris Pine/Odin Project
+
 year = 365.0 #in days
 day = 24.0 #in hours
 decade = 10.0 #in years

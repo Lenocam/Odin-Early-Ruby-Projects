@@ -1,3 +1,6 @@
+#Learn to Program/Chris Pine/Odin Project
+#Chapter 9 Tasks/Spanking for your birthday
+
 require 'date'
 
 puts "What year were you born?"
