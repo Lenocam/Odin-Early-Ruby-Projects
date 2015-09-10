@@ -5,13 +5,48 @@
 
 class Dragon
 
-  def initialize name
-    @name = name
+  def initialize
+    puts "What will you name your dragon?"
+    @name = gets.chomp
     @asleep = false
     @stuffInBelly     = 10  # He's full.
     @stuffInIntestine =  0  # He doesn't need to go.
 
     puts @name + ' is born.'
+    puts " "
+    interact
+  end
+
+  def interact
+    puts "What do you want to do next."
+    puts "You can do these things to help your dragon:"
+    puts "feed, walk, bed, toss, rock"
+    puts " "
+
+    interact = ' '
+    while interact != 'quit'
+      puts 'Enter an interaction to control your dragon:'
+      puts "feed, walk, bed, toss, rock"
+      interact = gets.chomp
+      puts " "
+
+      if interact == 'feed'
+        self.feed
+      elsif interact == 'walk'
+        self.walk
+      elsif interact == 'bed'
+        self.putToBed
+      elsif interact == 'toss'
+        self.toss
+      elsif interact == 'rock'
+        self.rock
+      elsif interact == 'exit'
+        exit
+      else
+        puts 'Can\'t recognize your interaction, please re-enter.'
+        puts " "
+      end
+    end
   end
 
   def feed
@@ -115,13 +150,4 @@ class Dragon
 
 end
 
-pet = Dragon.new 'Norbert'
-pet.feed
-pet.toss
-pet.walk
-pet.putToBed
-pet.rock
-pet.putToBed
-pet.putToBed
-pet.putToBed
-pet.putToBed
+pet = Dragon.new
