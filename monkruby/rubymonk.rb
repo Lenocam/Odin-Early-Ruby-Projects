@@ -80,3 +80,18 @@ def sum_of_cubes (a, b)
 end
 
 puts sum_of_cubes(1, 3)
+
+#return non-duplicate values from an Array
+arr = [1, 2, 2, 3, 2, 5, 6, 4, 45, 4, 7, 1, 6]
+def non_duplicated_values(values)
+  counts = Hash.new(0)
+  values.each  {|i| counts[i] += 1 }
+   counts.each do |k, v|
+     if v > 1
+       counts.delete(k)
+     end
+   end
+   values =counts.keys
+end
+
+puts non_duplicated_values(arr)
