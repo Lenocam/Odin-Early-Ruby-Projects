@@ -30,4 +30,20 @@ def find_frequency(sentence, word)
   sentence.split.count(word)
 end
 
-p find_frequency(frank, "do")
+puts find_frequency(frank, "do")
+puts ""
+
+#Sort the words in a given sentence by length
+
+
+sentence = "Sort words in a sentence"
+def sort_string(string)
+  ary = Array.new
+  ary = string.split
+  ary.sort_by! { |x| x.length }
+  ary.join(" ")
+end
+
+
+
+puts sort_string(sentence)
