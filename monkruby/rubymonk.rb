@@ -69,4 +69,14 @@ end
 p palindrome?(another_sentence)
 
 
-#The next thing
+#Sum of Cubes
+
+def sum_of_cubes (a, b)
+  sum = 0
+  array = (a..b).to_a
+  array.map! { |a| a**3}
+  array.each { |a| sum += a}
+  sum
+end
+
+puts sum_of_cubes(1, 3)
