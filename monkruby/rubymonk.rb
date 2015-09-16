@@ -44,6 +44,29 @@ def sort_string(string)
   ary.join(" ")
 end
 
-
-
 puts sort_string(sentence)
+
+#Select random elements from an array
+
+another_array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+def random_select(array, n)
+  # your code here
+  array.shuffle! #rubymonk would not let it pass with this
+  #array = array.shuffle worked though
+  array.take(n)
+end
+
+puts random_select(another_array, 2)
+#Palindromes
+another_sentence = "Never odd or even"
+
+def palindrome?(sentence)
+  sentence.downcase!
+  sentence.gsub!(' ', '')
+  sentence == sentence.reverse
+end
+
+p palindrome?(another_sentence)
+
+
+#The next thing
